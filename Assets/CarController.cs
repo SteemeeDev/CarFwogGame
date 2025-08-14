@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Experimental.AI;
 
 public class CarController : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class CarController : MonoBehaviour
                 speed += acceleration * Time.deltaTime;
                 if(driting)
                 {
-                    speed += acceleration/2 * Time.deltaTime;
+                   // speed += acceleration/2 * Time.deltaTime;
                     rb.drag = drag / 2;
                 }
             }
@@ -60,9 +61,13 @@ public class CarController : MonoBehaviour
 
         if (!driting)
         {
+            velocity = transform.up * speed;
+        }
+        else { 
+            velocity = Vector3.Lerp(new Vector3(0, 1, 0), transform.up, 0.8f) * speed;
         }
 
-        rb.AddForce(transform.up * speed, ForceMode.Acceleration);
+        rb.AddForce(velocity, ForceMode.Acceleration);
 
         //Debug.Log(rb.velocity.magnitude);
     }
