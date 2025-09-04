@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1333a6a0f9cc70d479ccc5d55d6fa0db
+guid: 8e35a48d8697d1843a9aa3e04d4c074e
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 7
+    spritePixelsToUnits: 100
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638925814317674241
+  platformSettingsDirtyTick: 0
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: "\u795E\u5947\u7684\u9752\u86D9\u8F66"
+  - name: "\u6545\u4E8B\u8BB2\u8FF0\u4E86\u4E00\u53EA\u516C\u8DEF\u9F9F\u88AB\u4E00\u53EA\u9752\u86D9\u54AC\u6B7B\u7684\u60B2\u60E8\u7ED3\u5C40\u3002\u5386\u53F2\u4F1A\u5FD8\u8BB0\u8FD9\u573A\u635F\u5931\uFF0C\u4F46\u5B83\u8EAB\u8FB9\u7684\u4EBA\u6C38\u8FDC\u4E0D\u4F1A\u5FD8\u8BB0\u3002"
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: -0.15384616}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 28
-      height: 32
-    spriteID: f82135e9a4db2eb4b9b5ebd0ccbddd76
+      width: 14
+      height: 13
+    spriteID: 72a92f8ecf4a36144970c967cbaeb5ea
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,59 +142,23 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1991388924
-    name: "\u795E\u5947\u7684\u9752\u86D9\u8F66"
+    guid: 2070344761
+    name: "\u6545\u4E8B\u8BB2\u8FF0\u4E86\u4E00\u53EA\u516C\u8DEF\u9F9F\u88AB\u4E00\u53EA\u9752\u86D9\u54AC\u6B7B\u7684\u60B2\u60E8\u7ED3\u5C40\u3002\u5386\u53F2\u4F1A\u5FD8\u8BB0\u8FD9\u573A\u635F\u5931\uFF0C\u4F46\u5B83\u8EAB\u8FB9\u7684\u4EBA\u6C38\u8FDC\u4E0D\u4F1A\u5FD8\u8BB0\u3002"
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: "\u795E\u5947\u7684\u9752\u86D9\u8F66"
+    - name: "\u6545\u4E8B\u8BB2\u8FF0\u4E86\u4E00\u53EA\u516C\u8DEF\u9F9F\u88AB\u4E00\u53EA\u9752\u86D9\u54AC\u6B7B\u7684\u60B2\u60E8\u7ED3\u5C40\u3002\u5386\u53F2\u4F1A\u5FD8\u8BB0\u8FD9\u573A\u635F\u5931\uFF0C\u4F46\u5B83\u8EAB\u8FB9\u7684\u4EBA\u6C38\u8FDC\u4E0D\u4F1A\u5FD8\u8BB0\u3002"
       frameIndex: 0
       cellRect:
-        x: 2
-        y: 0
-        width: 28
-        height: 32
-      spriteId: f82135e9a4db2eb4b9b5ebd0ccbddd76
+        x: 1
+        y: 2
+        width: 14
+        height: 13
+      spriteId: 72a92f8ecf4a36144970c967cbaeb5ea
     linkedCells: []
     parentIndex: -1
-  platformSettings:
-  - name: DefaultTexturePlatform
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Server
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
+  platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 32}
+  canvasSize: {x: 16, y: 16}

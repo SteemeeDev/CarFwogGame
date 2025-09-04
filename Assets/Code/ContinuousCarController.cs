@@ -15,12 +15,13 @@ public class ContinuosCarController : MonoBehaviour
     float speed = 0f;
     float drag = 5;
 
-    Rigidbody rb;
-    Vector3 velocity = Vector3.zero;
+    Rigidbody2D rb;
+
+    public Vector2 velocity = Vector2.zero;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -36,7 +37,7 @@ public class ContinuosCarController : MonoBehaviour
 
         if (accelerating == deccelerating)
         {
-            speed -= acceleration * Time.deltaTime;
+            speed -= acceleration * Time.deltaTime * 3f;
         }
         else
         {
@@ -54,7 +55,7 @@ public class ContinuosCarController : MonoBehaviour
             else if (deccelerating)
             {
                 Debug.Log("DECCELERATING!");
-                speed -= acceleration * Time.deltaTime * 3;
+                speed -= acceleration * Time.deltaTime * 10f;
             }
         }
 
@@ -65,11 +66,12 @@ public class ContinuosCarController : MonoBehaviour
             velocity = transform.up * speed;
         }
         else { 
-            velocity = Vector3.Lerp(new Vector3(0, 1, 0), transform.up, 0.8f) * speed;
+            velocity = Vector2.Lerp(new Vector2(0, 1), transform.up, 0.8f) * speed;
         }
 
-        rb.AddForce(velocity, ForceMode.Acceleration);
+        rb.AddForce(velocity, ForceMode2D.Force);
 
-        //Debug.Log(rb.velocity.magnitude);
+        // Make sure the player doesnt leave the map
+        transform.position = new Vector2(Mathf.Clamp(transform.position.x, -42f, 42), transform.position.y);
     }
 }
