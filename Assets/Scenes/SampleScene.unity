@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 128680127}
   - component: {fileID: 128680126}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -391,8 +391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9967ad4ab0839ab47bcb8dda82d96615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 40
-  acceleration: 25
+  maxSpeed: 240
+  acceleration: 120
   turnSpeed: 240
   velocity: {x: 0, y: 0}
 --- !u!61 &128680126
@@ -453,7 +453,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 5
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -2109,6 +2109,7 @@ MonoBehaviour:
   - {fileID: 198007567798642209, guid: bad5905da9a4ad140b5da7f7ebd3e603, type: 3}
   - {fileID: 3310045104167366131, guid: 26d79bb6b3bab22459897cc0a0f63316, type: 3}
   - {fileID: 5587122075148736470, guid: 7fe3cd6f034d6b94b896ac2ca2babcde, type: 3}
+  playerTransform: {fileID: 128680122}
 --- !u!4 &1304983993
 Transform:
   m_ObjectHideFlags: 0
@@ -3464,8 +3465,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 198007567798642209, guid: bad5905da9a4ad140b5da7f7ebd3e603, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4232726366883320175}
   m_SourcePrefab: {fileID: 100100000, guid: bad5905da9a4ad140b5da7f7ebd3e603, type: 3}
+--- !u!1 &3792623913664097529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 198007567798642209, guid: bad5905da9a4ad140b5da7f7ebd3e603, type: 3}
+  m_PrefabInstance: {fileID: 343246772477897340}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4232726366883320175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3792623913664097529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20374c4374f88784b912e27168f97a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteSize: {x: 0, y: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

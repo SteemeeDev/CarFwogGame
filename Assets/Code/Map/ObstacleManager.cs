@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObstacleManager : MonoBehaviour
 {
     [SerializeField] GameObject[] obstacles;
+    [SerializeField] Transform playerTransform;
 
     private void Start()
     {
@@ -12,6 +13,17 @@ public class ObstacleManager : MonoBehaviour
         {
             GameObject obstacle = Instantiate(obstacles[Random.Range(0, obstacles.Length)]);
             obstacle.transform.position = new Vector3(0, 30 * i);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        foreach (GameObject obstacle in obstacles)
+        {
+            if (obstacle.transform.position.y < playerTransform.position.y - 20)
+            {
+                Destroy(obstacle);
+            }
         }
     }
 }
