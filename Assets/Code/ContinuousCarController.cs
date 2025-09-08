@@ -27,8 +27,8 @@ public class ContinuosCarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool accelerating = Input.GetKey("joystick button " + forward);
-        bool deccelerating = Input.GetKey("joystick button " + backward);
+        bool accelerating = Input.GetKey("joystick button " + forward) || Input.GetKey(KeyCode.UpArrow);
+        bool deccelerating = Input.GetKey("joystick button " + backward) || Input.GetKey(KeyCode.DownArrow);
         bool driting = Input.GetKey("joystick button 7");
 
         rb.drag = drag;
@@ -69,7 +69,7 @@ public class ContinuosCarController : MonoBehaviour
             velocity = Vector2.Lerp(new Vector2(0, 1), transform.up, 0.8f) * speed;
         }
 
-        rb.AddForce(velocity, ForceMode2D.Force);
+        rb.AddForce(velocity);
 
         // Make sure the player doesnt leave the map
         transform.position = new Vector2(Mathf.Clamp(transform.position.x, -42f, 42), transform.position.y);
