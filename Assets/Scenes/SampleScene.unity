@@ -35,7 +35,7 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0.117
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 150
-  acceleration: 90
+  acceleration: 150
   turnSpeed: 240
   velocity: {x: 0, y: 0}
 --- !u!61 &128680126
@@ -2845,7 +2845,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 23.19
+  orthographic size: 18
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -3415,6 +3415,10 @@ PrefabInstance:
     - target: {fileID: 3310045104167366131, guid: 26d79bb6b3bab22459897cc0a0f63316, type: 3}
       propertyPath: m_Name
       value: RedMapPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798648028484431755, guid: 26d79bb6b3bab22459897cc0a0f63316, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5798648028484431755, guid: 26d79bb6b3bab22459897cc0a0f63316, type: 3}
       propertyPath: m_LocalPosition.x

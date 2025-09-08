@@ -72,6 +72,6 @@ public class ContinuosCarController : MonoBehaviour
         rb.AddForce(velocity);
 
         // Make sure the player doesnt leave the map
-        transform.position = new Vector2(Mathf.Clamp(transform.position.x, -42f, 42), transform.position.y);
+        transform.position = new Vector2(Mathf.Clamp(transform.position.x, -32f, 32), transform.position.y);
     }
 }
