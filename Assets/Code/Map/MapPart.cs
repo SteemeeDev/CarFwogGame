@@ -3,9 +3,9 @@ using UnityEngine;
 public class MapPart : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
-    [SerializeField] Vector2 spriteSize;
+    public Vector2 spriteSize;
 
-    private void Start()
+    public void UpdateSpriteSize()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteSize = spriteRenderer.size * transform.localScale;
