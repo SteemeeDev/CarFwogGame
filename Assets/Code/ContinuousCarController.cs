@@ -9,10 +9,10 @@ public class ContinuosCarController : MonoBehaviour
     const int forward = 1;
     const int backward = 0;
 
-    [SerializeField] float maxSpeed = 10f;
+    public float maxSpeed = 10f;
     [SerializeField] float acceleration = 1f;
     [SerializeField] float turnSpeed;
-    float speed = 0f;
+    public float speed = 0f;
     float drag = 5;
 
     Rigidbody2D rb;
