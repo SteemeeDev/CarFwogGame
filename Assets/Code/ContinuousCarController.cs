@@ -19,6 +19,8 @@ public class ContinuosCarController : MonoBehaviour
 
     public Vector2 velocity = Vector2.zero;
 
+    [SerializeField] float threshold = 0;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -70,6 +72,8 @@ public class ContinuosCarController : MonoBehaviour
         }
 
         rb.AddForce(velocity);
+
+        if (rb.velocity.magnitude > threshold) Debug.Log("RIGIDBODY MOVED TOO FAST! Moved: " + rb.velocity.magnitude);
 
         // Make sure the player doesnt leave the map
         transform.position = new Vector2(Mathf.Clamp(transform.position.x, -32f, 32), transform.position.y);

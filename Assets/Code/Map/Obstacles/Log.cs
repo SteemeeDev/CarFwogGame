@@ -12,4 +12,12 @@ public class Log : MonoBehaviour
     {
         transform.position -= Vector3.up * speed * Time.deltaTime;
     }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Log hit player!");
+        }
+    }
 }
