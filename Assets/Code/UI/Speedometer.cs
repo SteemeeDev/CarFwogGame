@@ -6,9 +6,6 @@ using UnityEngine;
 public class Speedometer : MonoBehaviour
 {
     [SerializeField] GameObject frogcar;
-    [SerializeField] float scaling;
-    [SerializeField] int startposition = 200;
-
     ContinuosCarController car;
     // Start is called before the first frame update
     void Start()
@@ -23,7 +20,7 @@ public class Speedometer : MonoBehaviour
         //float velocity = -(rb.velocity.magnitude*scaling)+startposition;
         //this.gameObject.GetComponent<TMP_Text>().text = velocity.ToString();
         // transform.rotation = Quaternion.Euler(Vector3.forward * velocity);
-        Debug.Log( car.speed/car.maxSpeed);
-        transform.eulerAngles = new Vector3 (0, 0, Mathf.Lerp(0, 360, car.maxSpeed / car.speed));
+       
+        transform.eulerAngles = new Vector3 (0, 0, Mathf.Lerp(180, 0, car.speed / car.maxSpeed));
     }
 }
