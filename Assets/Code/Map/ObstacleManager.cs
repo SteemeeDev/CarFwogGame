@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class ObstacleManager : MonoBehaviour
 {
-    [SerializeField] GameObject[] obstaclePrefabs;
+    [SerializeField] GameObject[] mapPartPrefabs;
     [SerializeField] Transform playerTransform;
-    [SerializeField] List<GameObject> obstacles;
+    [SerializeField] List<GameObject> mapParts;
 
     private void Start()
     {
@@ -19,12 +19,12 @@ public class ObstacleManager : MonoBehaviour
     
     private void FixedUpdate()
     {
-        for (int i = 0; i < obstacles.Count - 1; i++)
+        for (int i = 0; i < mapParts.Count - 1; i++)
         {
-            if (obstacles[i].transform.position.y < playerTransform.position.y - 60)
+            if (mapParts[i].transform.position.y < playerTransform.position.y - 60)
             {
-                Destroy(obstacles[i]);
-                obstacles.Remove(obstacles[i]);
+                Destroy(mapParts[i]);
+                mapParts.Remove(mapParts[i]);
                 SpawnNewMapPart();
             }
         }
@@ -32,12 +32,12 @@ public class ObstacleManager : MonoBehaviour
 
     private void SpawnNewMapPart()
     {
-        GameObject obstacle = Instantiate(obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)]);
+        GameObject obstacle = Instantiate(mapPartPrefabs[Random.Range(0, mapPartPrefabs.Length)]);
         MapPart mapPart = obstacle.GetComponent<MapPart>();
-        MapPart previousMapPart = obstacles.ElementAt(obstacles.Count - 1).GetComponent<MapPart>();
+        MapPart previousMapPart = mapParts.ElementAt(mapParts.Count - 1).GetComponent<MapPart>();
         mapPart.UpdateSpriteSize();
         obstacle.transform.position = new Vector3(0,
-            obstacles.ElementAt(obstacles.Count - 1).transform.position.y + previousMapPart.spriteSize.y / 2f + mapPart.spriteSize.y / 2f);
-        obstacles.Add(obstacle);
+            mapParts.ElementAt(mapParts.Count - 1).transform.position.y + previousMapPart.spriteSize.y / 2f + mapPart.spriteSize.y / 2f);
+        mapParts.Add(obstacle);
     }
 }
