@@ -4388,8 +4388,8 @@ GameObject:
   - component: {fileID: 2095168451}
   - component: {fileID: 2095168450}
   m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_Name: High Score
+  m_TagString: HighScore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4425,7 +4425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d84d6631b19c084409ba7dc6c06c4f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 54
+  score: 0
 --- !u!114 &2095168451
 MonoBehaviour:
   m_ObjectHideFlags: 0
