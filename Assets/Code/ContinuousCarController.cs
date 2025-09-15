@@ -29,14 +29,21 @@ public class ContinuosCarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.01f)
+        {
+            Debug.Log("TURNING");
+            transform.Rotate(new Vector3(0, 0, -Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime));
+        }
+    }
+
+    private void FixedUpdate()
+    {
         bool accelerating = Input.GetKey("joystick button " + forward) || Input.GetKey(KeyCode.UpArrow);
         bool deccelerating = Input.GetKey("joystick button " + backward) || Input.GetKey(KeyCode.DownArrow);
         bool driting = Input.GetKey("joystick button 7");
 
         rb.drag = drag;
-
-        transform.Rotate(new Vector3(0, 0, -Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime));
-        Debug.Log(Input.GetAxis("Horizontal"));
+        //   Debug.Log(Input.GetAxis("Horizontal"));
 
         if (accelerating == deccelerating)
         {
@@ -48,9 +55,9 @@ public class ContinuosCarController : MonoBehaviour
             {
                 Debug.Log("ACCELERATING!");
                 speed += acceleration * Time.deltaTime;
-                if(driting)
+                if (driting)
                 {
-                   // speed += acceleration/2 * Time.deltaTime;
+                    // speed += acceleration/2 * Time.deltaTime;
                     rb.drag = drag / 2;
                 }
             }
@@ -68,7 +75,8 @@ public class ContinuosCarController : MonoBehaviour
         {
             velocity = transform.up * speed;
         }
-        else { 
+        else
+        {
             velocity = Vector2.Lerp(new Vector2(0, 1), transform.up, 0.8f) * speed;
         }
 

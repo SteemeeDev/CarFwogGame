@@ -393,8 +393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9967ad4ab0839ab47bcb8dda82d96615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 100
-  acceleration: 100
+  maxSpeed: 400
+  acceleration: 400
   turnSpeed: 400
   speed: 0
   velocity: {x: 0, y: 0}
@@ -470,7 +470,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &128680128
 Animator:
   serializedVersion: 5
@@ -3702,11 +3702,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2077170568127957535, guid: 26d79bb6b3bab22459897cc0a0f63316, type: 3}
       propertyPath: spriteSize.x
-      value: 82
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 2077170568127957535, guid: 26d79bb6b3bab22459897cc0a0f63316, type: 3}
       propertyPath: spriteSize.y
-      value: 70
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 2077170568127957535, guid: 26d79bb6b3bab22459897cc0a0f63316, type: 3}
       propertyPath: validMapParts.Array.data[1]
