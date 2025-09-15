@@ -36,6 +36,7 @@ public class ContinuosCarController : MonoBehaviour
         rb.drag = drag;
 
         transform.Rotate(new Vector3(0, 0, -Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime));
+        Debug.Log(Input.GetAxis("Horizontal"));
 
         if (accelerating == deccelerating)
         {

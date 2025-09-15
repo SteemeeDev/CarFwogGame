@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class ObstacleManager : MonoBehaviour
 {
-    [SerializeField] GameObject[] mapPartPrefabs;
     [SerializeField] Transform playerTransform;
     [SerializeField] List<GameObject> mapParts;
 
@@ -32,12 +31,12 @@ public class ObstacleManager : MonoBehaviour
 
     private void SpawnNewMapPart()
     {
-        GameObject obstacle = Instantiate(mapPartPrefabs[Random.Range(0, mapPartPrefabs.Length)]);
-        MapPart mapPart = obstacle.GetComponent<MapPart>();
         MapPart previousMapPart = mapParts.ElementAt(mapParts.Count - 1).GetComponent<MapPart>();
+        GameObject obstacle = Instantiate(previousMapPart.validMapParts[Random.Range(0, previousMapPart.validMapParts.Length)]);
+        MapPart mapPart = obstacle.GetComponent<MapPart>();
         mapPart.UpdateSpriteSize();
-        obstacle.transform.position = new Vector3(0,
-            mapParts.ElementAt(mapParts.Count - 1).transform.position.y + previousMapPart.spriteSize.y / 2f + mapPart.spriteSize.y / 2f);
+        obstacle.transform.position = new Vector2(0,
+            mapParts.ElementAt(mapParts.Count - 1).transform.position.y + 64);
         mapParts.Add(obstacle);
     }
 }

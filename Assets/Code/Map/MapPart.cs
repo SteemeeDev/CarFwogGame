@@ -6,7 +6,9 @@ public class MapPart : MonoBehaviour
     SpriteRenderer spriteRenderer;
     public Vector2 spriteSize;
 
-    private void Awake()
+    public GameObject[] validMapParts;
+
+    private void Start()
     {
         UpdateSpriteSize();
     }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4870291713519839809}
   - component: {fileID: 8338588407466174797}
   m_Layer: 0
-  m_Name: YellowMapPart
+  m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -431099353, guid: 09ebc8b4eadc04442807ad7b911e731c, type: 3}
+  m_Sprite: {fileID: -1236419641, guid: 09ebc8b4eadc04442807ad7b911e731c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,3 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteSize: {x: 0, y: 0}
+  validMapParts:
+  - {fileID: 5587122075148736470}
+  - {fileID: 3310045104167366131, guid: 26d79bb6b3bab22459897cc0a0f63316, type: 3}
+  - {fileID: 5587122075148736470, guid: 7fe3cd6f034d6b94b896ac2ca2babcde, type: 3}
