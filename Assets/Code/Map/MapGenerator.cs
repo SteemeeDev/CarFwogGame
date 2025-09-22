@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class ObstacleManager : MonoBehaviour
+public class MapGenerator : MonoBehaviour
 {
     [SerializeField] Transform playerTransform;
     [SerializeField] List<GameObject> mapParts;

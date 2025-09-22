@@ -6,16 +6,20 @@ using UnityEngine;
 public class Log : MonoBehaviour
 {
     [SerializeField] float speed;
+    public Transform playerTransform;
 
     // Update is called once per frame
     void Update()
     {
-        transform.position -= Vector3.up * speed * Time.deltaTime;
+        if (transform.position.y - playerTransform.position.y < 30f)
+        {
+            transform.position -= Vector3.up * speed * Time.deltaTime;
+        }
     }
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collider.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Log hit player!");
         }
