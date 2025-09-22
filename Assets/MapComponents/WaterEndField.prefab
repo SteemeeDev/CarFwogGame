@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5798648028484431755}
   - component: {fileID: 2002411721309412710}
   - component: {fileID: 2077170568127957535}
+  - component: {fileID: -2750670735395667595}
   m_Layer: 0
   m_Name: WaterEndField
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1128
   m_Sprite: {fileID: 228932261, guid: 09ebc8b4eadc04442807ad7b911e731c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -103,3 +104,18 @@ MonoBehaviour:
   - {fileID: 5587122075148736470, guid: 3a12115e6543fc8458d8fca23fdf9f45, type: 3}
   - {fileID: 198007567798642209, guid: bad5905da9a4ad140b5da7f7ebd3e603, type: 3}
   - {fileID: 198007567798642209, guid: bd1a2438a8761764f9236d06f3929b81, type: 3}
+--- !u!114 &-2750670735395667595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3310045104167366131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee26eaa8daae50f49a4b592a2814efd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logPrefab: {fileID: 570619297213109166, guid: 67f5ccd225532e64d9e655ff5754aa7e, type: 3}
+  minSpawnAmount: -2
+  maxSpawnAmount: 2
