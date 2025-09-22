@@ -23,8 +23,14 @@ public class EnemyCarScript : MonoBehaviour
     void Update()
     {
         transform.position = transform.position + new Vector3(speed, 0, 0);
-        if (transform.position.x <= exitlocation)
+        if (goingleft)
+        {
+            if (transform.position.x <= exitlocation)
             Destroy(gameObject);
+        } else if (transform.position.x >= exitlocation)
+            Destroy(gameObject);
+
+
     }
 
 }
