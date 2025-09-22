@@ -12,7 +12,7 @@ using UnityEngine;
 public class HighScore : MonoBehaviour
 {
     TMP_Text display;
-    public int score;
+    float time;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +23,8 @@ public class HighScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time = time + Time.deltaTime;
         //int.TryParse(display.text, out score);
-        display.text = score.ToString();
+        display.text = Math.Round(time, 0).ToString();
     }
 }

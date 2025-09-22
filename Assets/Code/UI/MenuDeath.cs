@@ -19,8 +19,7 @@ public class MenuDeath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            playerdeath();
+
     }
     public void playerdeath()
     {
@@ -33,6 +32,6 @@ public class MenuDeath : MonoBehaviour
     }
     public void QuitToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("menu_screen");
     }
 }
