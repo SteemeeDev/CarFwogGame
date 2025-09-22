@@ -2199,30 +2199,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3310045104167366131, guid: 26d79bb6b3bab22459897cc0a0f63316, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1052831488}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26d79bb6b3bab22459897cc0a0f63316, type: 3}
 --- !u!1 &1052831484 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3310045104167366131, guid: 26d79bb6b3bab22459897cc0a0f63316, type: 3}
   m_PrefabInstance: {fileID: 1052831483}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1052831488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052831484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c98d0cab8b916e42bc721175744d7c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftGoingCars:
-  - {fileID: 6823698772937195179, guid: 9d8ebf1ccf96a654794b3bafbe93c481, type: 3}
 --- !u!1 &1072518291
 GameObject:
   m_ObjectHideFlags: 0

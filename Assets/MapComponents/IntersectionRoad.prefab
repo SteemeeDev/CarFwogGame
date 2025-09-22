@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5739677221167484893}
   - component: {fileID: 4870291713519839809}
   - component: {fileID: 8338588407466174797}
+  - component: {fileID: -3922976666576311496}
   m_Layer: 0
   m_Name: IntersectionRoad
   m_TagString: Untagged
@@ -100,3 +101,23 @@ MonoBehaviour:
   spriteSize: {x: 0, y: 0}
   validMapParts:
   - {fileID: 198007567798642209, guid: bad5905da9a4ad140b5da7f7ebd3e603, type: 3}
+--- !u!114 &-3922976666576311496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5587122075148736470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c98d0cab8b916e42bc721175744d7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftGoingCars:
+  - {fileID: 6823698772937195179, guid: 9d8ebf1ccf96a654794b3bafbe93c481, type: 3}
+  - {fileID: 4659653591601418610, guid: 29ea6f10656589a4c940f8bb000a0daa, type: 3}
+  - {fileID: 1477914780610771473, guid: de879f19d2f6b0f4f837fc8823eee8c4, type: 3}
+  rightGoingCars:
+  - {fileID: 8578545500147027369, guid: f57a71e03a440ad47a75023f1171c61e, type: 3}
+  - {fileID: 3491577213269087684, guid: 161ae95cf1b9fd34bb387b9ce6bf4ed8, type: 3}
+  - {fileID: 9036376639370333632, guid: b373af001bced1a43986992268a32cb8, type: 3}
