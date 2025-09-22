@@ -15,7 +15,7 @@ public class ContinuosCarController : MonoBehaviour
     public float speed = 0f;
     float drag = 5;
 
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     public Vector2 velocity = Vector2.zero;
 
@@ -40,9 +40,8 @@ public class ContinuosCarController : MonoBehaviour
     {
         bool accelerating = Input.GetKey("joystick button " + forward) || Input.GetKey(KeyCode.UpArrow);
         bool deccelerating = Input.GetKey("joystick button " + backward) || Input.GetKey(KeyCode.DownArrow);
-        bool driting = Input.GetKey("joystick button 7");
+        //  bool driting = Input.GetKey("joystick button 7");
 
-        rb.drag = drag;
         //   Debug.Log(Input.GetAxis("Horizontal"));
 
         if (accelerating == deccelerating)
@@ -53,32 +52,20 @@ public class ContinuosCarController : MonoBehaviour
         {
             if (accelerating)
             {
-                Debug.Log("ACCELERATING!");
+               // Debug.Log("ACCELERATING!");
                 speed += acceleration * Time.deltaTime;
-                if (driting)
-                {
-                    // speed += acceleration/2 * Time.deltaTime;
-                    rb.drag = drag / 2;
-                }
             }
 
             else if (deccelerating)
             {
-                Debug.Log("DECCELERATING!");
+               // Debug.Log("DECCELERATING!");
                 speed -= acceleration * Time.deltaTime * 10f;
             }
         }
 
         speed = Mathf.Clamp(speed, 0f, maxSpeed);
 
-        if (!driting)
-        {
-            velocity = transform.up * speed;
-        }
-        else
-        {
-            velocity = Vector2.Lerp(new Vector2(0, 1), transform.up, 0.8f) * speed;
-        }
+        velocity = transform.up * speed;
 
         rb.AddForce(velocity);
 

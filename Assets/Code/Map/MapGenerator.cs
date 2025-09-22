@@ -20,7 +20,7 @@ public class MapGenerator : MonoBehaviour
     {
         for (int i = 0; i < mapParts.Count - 1; i++)
         {
-            if (mapParts[i].transform.position.y < playerTransform.position.y - 60)
+            if (mapParts[i].transform.position.y < playerTransform.position.y - 150)
             {
                 Destroy(mapParts[i]);
                 mapParts.Remove(mapParts[i]);
@@ -33,6 +33,7 @@ public class MapGenerator : MonoBehaviour
     {
         MapPart previousMapPart = mapParts.ElementAt(mapParts.Count - 1).GetComponent<MapPart>();
         GameObject obstacle = Instantiate(previousMapPart.validMapParts[Random.Range(0, previousMapPart.validMapParts.Length)]);
+        obstacle.transform.parent = transform;
         MapPart mapPart = obstacle.GetComponent<MapPart>();
         mapPart.UpdateSpriteSize();
         obstacle.transform.position = new Vector2(0,

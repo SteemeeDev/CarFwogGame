@@ -10,10 +10,14 @@ public class MenuDeath : MonoBehaviour
 {
     [SerializeField] GameObject deathscreen;
     [SerializeField] GameObject Canvas;
+
+    ContinuosCarController carController;
+    Animator frogAnimator;
     // Start is called before the first frame update
     void Start()
     {
-
+        carController = FindAnyObjectByType<ContinuosCarController>();
+        frogAnimator = carController.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,7 +28,8 @@ public class MenuDeath : MonoBehaviour
     public void playerdeath()
     {
         Object.Instantiate(deathscreen, Canvas.transform);
-        
+        carController.enabled = false;
+        frogAnimator.SetTrigger("DrownFrog");
     }
     public void restartgame()
     {

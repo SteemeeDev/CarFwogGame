@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7678292211904256754}
   - component: {fileID: 2721113705489905608}
   - component: {fileID: 9034503185375707142}
+  - component: {fileID: -4905120671473507565}
   m_Layer: 0
   m_Name: StraightRoad
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1128
   m_Sprite: {fileID: -606515736, guid: 09ebc8b4eadc04442807ad7b911e731c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -108,3 +109,18 @@ MonoBehaviour:
   - {fileID: 198007567798642209}
   - {fileID: 198007567798642209}
   - {fileID: 198007567798642209}
+--- !u!114 &-4905120671473507565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198007567798642209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee26eaa8daae50f49a4b592a2814efd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logPrefab: {fileID: 570619297213109166, guid: 67f5ccd225532e64d9e655ff5754aa7e, type: 3}
+  minSpawnAmount: -2
+  maxSpawnAmount: 2

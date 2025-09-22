@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4870291713519839809}
   - component: {fileID: 8338588407466174797}
   - component: {fileID: -3922976666576311496}
+  - component: {fileID: -1853911473582010353}
   m_Layer: 0
   m_Name: IntersectionRoad
   m_TagString: Untagged
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1128
   m_Sprite: {fileID: -1682151471, guid: 09ebc8b4eadc04442807ad7b911e731c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121,3 +122,18 @@ MonoBehaviour:
   - {fileID: 8578545500147027369, guid: f57a71e03a440ad47a75023f1171c61e, type: 3}
   - {fileID: 3491577213269087684, guid: 161ae95cf1b9fd34bb387b9ce6bf4ed8, type: 3}
   - {fileID: 9036376639370333632, guid: b373af001bced1a43986992268a32cb8, type: 3}
+--- !u!114 &-1853911473582010353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5587122075148736470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee26eaa8daae50f49a4b592a2814efd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logPrefab: {fileID: 570619297213109166, guid: 67f5ccd225532e64d9e655ff5754aa7e, type: 3}
+  minSpawnAmount: -2
+  maxSpawnAmount: 2
