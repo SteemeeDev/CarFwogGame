@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: othercar 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 0bd3c28e0c4b26440b15dff564e202c9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 0bd3c28e0c4b26440b15dff564e202c9, type: 3}
       propertyPath: m_LocalScale.x
       value: 25
@@ -127,7 +131,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.28000003}
+  m_Size: {x: 0.12, y: 0.21}
   m_EdgeRadius: 0
 --- !u!114 &9091175626688827037
 MonoBehaviour:
@@ -141,5 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e173043b06ca0584691f7f4a1b543bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathManager: {fileID: 7875146116053394778, guid: bad6e73089dcbcc48bdc7e6655402a87, type: 3}
   goingleft: 1
-  speed: 0.6
+  speed: 0.2

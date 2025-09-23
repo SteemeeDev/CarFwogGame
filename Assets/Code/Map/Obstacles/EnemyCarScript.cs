@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class EnemyCarScript : MonoBehaviour
 {
+    [SerializeField] MenuDeath deathManager;
     [SerializeField] bool goingleft;
     [SerializeField] float speed = 1;
     float exitlocation = 35;
@@ -16,7 +17,7 @@ public class EnemyCarScript : MonoBehaviour
             speed = -speed;
             exitlocation = -35;
         }
-
+        deathManager = GameObject.Find("death controller").GetComponent<MenuDeath>();
     }
 
     // Update is called once per frame
@@ -32,5 +33,11 @@ public class EnemyCarScript : MonoBehaviour
 
 
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            deathManager.playerdeath();
+        }
+    }
 }
