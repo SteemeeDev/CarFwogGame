@@ -147,4 +147,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathManager: {fileID: 7875146116053394778, guid: bad6e73089dcbcc48bdc7e6655402a87, type: 3}
   goingleft: 1
-  speed: 0.2
+  speed: 10

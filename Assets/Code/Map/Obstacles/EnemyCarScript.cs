@@ -12,6 +12,7 @@ public class EnemyCarScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        speed = speed * 10;
         if (goingleft)
         {
             speed = -speed;
@@ -23,7 +24,7 @@ public class EnemyCarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = transform.position + new Vector3(speed, 0, 0);
+        transform.position = transform.position + new Vector3(speed*Time.deltaTime, 0, 0);
         if (goingleft)
         {
             if (transform.position.x <= exitlocation)

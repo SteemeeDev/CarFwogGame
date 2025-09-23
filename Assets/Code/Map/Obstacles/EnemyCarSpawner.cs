@@ -7,7 +7,7 @@ public class EnemyCarSpawner : MonoBehaviour
     [SerializeField] GameObject[] leftGoingCars;
     [SerializeField] GameObject[] rightGoingCars;
     float time;
-    float spawntime = 0.5f;
+    float spawntime = 0.6f;
     // Start is called before the first frame update
     void Start()
     {
