@@ -28,15 +28,19 @@ public class PlayerWaterHandler : MonoBehaviour
         //Check if on water and speed is 0
         if (onWater)
         {
-            timeOnWater += Time.deltaTime;
-
             if (carController.rb.velocity.magnitude > minSpeedOnWater)
             {
                 if (!bubbleParticles.isPlaying)
                     bubbleParticles.Play();
+                timeOnWater = 0f;
             }
             else
             {
+                timeOnWater += Time.deltaTime;
+
+                if (bubbleParticles.isPlaying)
+                    bubbleParticles.Stop();
+
                 if (timeOnWater > gracePeriod)
                 {
                     menuDeath.playerdeath();

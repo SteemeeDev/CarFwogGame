@@ -610,12 +610,12 @@ MonoBehaviour:
   carController: {fileID: 128680125}
   menuDeath: {fileID: 758765022}
   onWater: 0
-  minSpeedOnWater: 0.3
+  minSpeedOnWater: 4.5
   bubbleParticles: {fileID: 1647832512}
   waterLayer:
     serializedVersion: 2
     m_Bits: 16
-  gracePeriod: 1
+  gracePeriod: 0.8
 --- !u!1 &184996803
 GameObject:
   m_ObjectHideFlags: 0
