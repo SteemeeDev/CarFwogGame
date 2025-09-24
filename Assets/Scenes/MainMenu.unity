@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8154a5ab232bbac4bbb2192687285ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamescene: AlvinTestScene2
+  gamescene: SampleScene
 --- !u!1 &447854517
 GameObject:
   m_ObjectHideFlags: 0
