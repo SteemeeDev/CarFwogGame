@@ -18,16 +18,16 @@ public class MenuMain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
+        /*if (EventSystem.current.IsPointerOverGameObject())
         {
-            Debug.Log("Its over UI elements");
+            Debug.Log("Its over the play button");
             anim.SetTrigger("Over");
         }
         else
         {
-            Debug.Log("Its NOT over UI elements");
+            Debug.Log("Its NOT over the play button");
             anim.SetTrigger("Not Over");
-        }
+        }*/
     }
     public void OnClickPlay()
     {
